@@ -51,6 +51,44 @@
 	maturation_time = 5 MINUTES
 	produce_time = 2 MINUTES
 
+/datum/plant_def/shroom
+	name = "shroom spores"
+	icon = 'icons/roguetown/misc/crops.dmi'
+	icon_state = "shroom"
+	produce_type = /obj/item/reagent_containers/food/snacks/grown/shroom
+	produce_amount = 3
+	uproot_loot = list(/obj/item/natural/fibers, /obj/item/natural/fibers)
+	maturation_nutrition = 30
+	produce_nutrition = 20
+	maturation_time = 5 MINUTES
+	produce_time = 2 MINUTES
+
+/datum/plant_def/poppy
+	name = "poppy buds"
+	icon = 'icons/roguetown/misc/crops.dmi'
+	icon_state = "poppy"
+	produce_type = /obj/item/reagent_containers/food/snacks/grown/poppy
+	uproot_loot = list(/obj/item/grown/log/tree/small)
+	perennial = TRUE
+	produce_amount = 2
+	maturation_nutrition = 60
+	produce_nutrition =  30
+	maturation_time = 10 MINUTES
+	produce_time = 5 MINUTES
+
+/datum/plant_def/herbs
+	name = "herb bush"
+	icon = 'icons/roguetown/misc/crops.dmi'
+	icon_state = "herbs"
+	produce_type = /obj/item/reagent_containers/food/snacks/grown/herbs
+	uproot_loot = list(/obj/item/grown/log/tree/small)
+	perennial = TRUE
+	produce_amount = 2
+	maturation_nutrition = 60
+	produce_nutrition =  30
+	maturation_time = 10 MINUTES
+	produce_time = 5 MINUTES
+
 /datum/plant_def/oat
 	name = "oat stalks"
 	icon = 'icons/roguetown/misc/crops.dmi'
