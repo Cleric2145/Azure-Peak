@@ -21,7 +21,9 @@
 							/obj/item/natural/rock = 2,
 							/obj/item/grown/log/tree/stick = 3,
 							/obj/structure/closet/dirthole/closed/loot=3,
-							/obj/structure/flora/roguetree/burnt = 3)
+							/obj/structure/flora/roguetree/burnt = 3
+							/obj/structure/flora/wildplant/wild_poppy = 3,
+							/obj/structure/flora/wildplant/wild_herbs = 3)
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=5)
 	allowed_areas = list(/area/rogue/outdoors/beach/forest)
 
