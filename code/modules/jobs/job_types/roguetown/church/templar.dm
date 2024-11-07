@@ -25,7 +25,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltr = /obj/item/roguekey/church
-	id = pick(/obj/item/clothing/ring/silver, /obj/item/clothing/ring/gold)
+	id = /obj/item/clothing/ring/silver
 	backl = /obj/item/storage/backpack/rogue/satchel
 	
 /datum/job/roguetown/templar/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
@@ -75,7 +75,7 @@
 		if(/datum/patron/old_god)
 			neck = /obj/item/clothing/neck/roguetown/psicross
 			cloak = /obj/item/clothing/cloak/tabard/crusader/psydon
-	pants = pick(/obj/item/clothing/under/roguetown/tights/black, /obj/item/clothing/under/roguetown/tights/white)
+	pants = pick(/obj/item/clothing/under/roguetown/tights/black, /obj/item/clothing/under/roguetown/tights)
 	wrists = /obj/item/clothing/wrists/roguetown/wrappings
 	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	if(H.mind)
@@ -153,7 +153,7 @@
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	pants = /obj/item/clothing/under/roguetown/chainlegs
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/yarrow
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 	if(H.mind)

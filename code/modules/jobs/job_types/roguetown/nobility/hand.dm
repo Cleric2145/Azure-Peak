@@ -33,7 +33,7 @@
 */
 
 /datum/outfit/job/roguetown/hand
-	shoes = pick(/obj/item/clothing/shoes/roguetown/boots, /obj/item/clothing/shoes/roguetown/boots/noble)
+	shoes = pick(/obj/item/clothing/shoes/roguetown/boots, /obj/item/clothing/shoes/roguetown/nobleboot)
 	belt = /obj/item/storage/belt/rogue/leather/steel
 
 /datum/job/roguetown/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
