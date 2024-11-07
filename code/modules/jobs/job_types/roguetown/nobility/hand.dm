@@ -33,7 +33,7 @@
 */
 
 /datum/outfit/job/roguetown/hand
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	shoes = pick(/obj/item/clothing/shoes/roguetown/boots, /obj/item/clothing/shoes/roguetown/boots/noble)
 	belt = /obj/item/storage/belt/rogue/leather/steel
 
 /datum/job/roguetown/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
@@ -57,7 +57,7 @@
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/storage/keyring/hand = 1)
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/hand
-	pants = /obj/item/clothing/under/roguetown/tights/black
+	pants = pick(/obj/item/clothing/under/roguetown/tights/black, /obj/item/clothing/under/roguetown/tights/purple)
 	beltr = /obj/item/rogueweapon/sword/rapier/dec
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
