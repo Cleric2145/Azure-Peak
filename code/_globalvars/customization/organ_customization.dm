@@ -5,6 +5,7 @@ GLOBAL_LIST_INIT(named_penis_sizes, list(
 ))
 
 GLOBAL_LIST_INIT(named_ball_sizes, list(
+	"Tiny" = 0,
 	"Small" = 1,
 	"Average" = 2,
 	"Large" = 3,
