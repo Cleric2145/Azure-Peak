@@ -85,6 +85,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/eye_color = "000"				//Eye color
 	var/voice_color = "a0a0a0"
 	var/voice_pitch = 1
+	var/voice_pack = /datum/voicepack/male
 	var/detail_color = "000"
 	var/datum/species/pref_species = new /datum/species/human/northern()	//Mutant race
 	var/static/datum/species/default_species = new /datum/species/human/northern()
@@ -419,6 +420,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<b>Voice Color: </b><a href='?_src_=prefs;preference=voice;task=input'>Change</a>"
 			dat += "<br><b>Nickname Color: </b> </b><a href='?_src_=prefs;preference=highlight_color;task=input'>Change</a>"
 			dat += "<br><b>Voice Pitch: </b><a href='?_src_=prefs;preference=voice_pitch;task=input'>[voice_pitch]</a>"
+			dat += "<br><b>Voice Pack: </b><a href='?_src_=prefs;preference=voice_pack;task=input'>[voice_pack]</a>"
 			dat += "<br><b>Accent:</b> <a href='?_src_=prefs;preference=char_accent;task=input'>[char_accent]</a>"
 			dat += "<br><b>Features:</b> <a href='?_src_=prefs;preference=customizers;task=menu'>Change</a>"
 			dat += "<br><b>Markings:</b> <a href='?_src_=prefs;preference=markings;task=menu'>Change</a>"

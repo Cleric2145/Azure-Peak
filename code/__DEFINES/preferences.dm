@@ -136,3 +136,16 @@ GLOBAL_LIST_INIT(pronouns_list, list(HE_HIM, SHE_HER, THEY_THEM, THEY_THEM_F, IT
 #define VOICE_TYPE_ANDR	"Androgynous"
 
 GLOBAL_LIST_INIT(voice_types_list, list(VOICE_TYPE_MASC, VOICE_TYPE_FEM, VOICE_TYPE_ANDR))
+
+// Voice Packs
+#define VOICE_PACK_MALE "Generic Male"
+#define VOICE_PACK_FEMALE "Generic Female"
+#define VOICE_PACK_GOBLINM "Goblin Male"
+#define VOICE_PACK_GOBLINF "Goblin Female"
+#define VOICE_PACK_GOBLIN "Goblin Feral"
+#define VOICE_PACK_DWARFM "Dwarven Male"
+#define VOICE_PACK_DWARFF "Dwarven Female"
+#define VOICE_PACK_ELFM "Elven Male"
+#define VOICE_PACK_ELFF "Elven Female"
+
+GLOBAL_LIST_INIT(voice_pack_list, list(VOICE_PACK_MALE, VOICE_PACK_FEMALE, VOICE_PACK_GOBLINM, VOICE_PACK_GOBLINF, VOICE_PACK_GOBLIN, VOICE_PACK_DWARFM, VOICE_PACK_DWARFF, VOICE_PACK_ELFM, VOICE_PACK_ELFF))
