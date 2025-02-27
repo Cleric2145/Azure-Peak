@@ -2163,7 +2163,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/beer/murkwine // not Toilet wine
 	name = "mürkwine"
 	boozepwr = 50  // bubba's best
-	taste_description = "hints of questionable choices and bouqet of murkwater and pure ethanol"
+	taste_description = "hints of questionable choices and a bouqet of murkwater and pure ethanol"
 	color = "#4b1e00"
 
 /datum/reagent/consumable/ethanol/beer/nocshine // wait, no, NOCSHINE
