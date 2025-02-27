@@ -2160,6 +2160,19 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#772C48"
 	quality = DRINK_GOOD
 
+/datum/reagent/consumable/ethanol/beer/murkwine // not Toilet wine
+	name = "mürkwine"
+	boozepwr = 50  // bubba's best
+	taste_description = "hints of questionable choices and bouqet of murkwater and pure ethanol"
+	color = "#4b1e00"
+
+/datum/reagent/consumable/ethanol/beer/nocshine // wait, no, NOCSHINE
+	name = "noc's shine"
+	boozepwr = 70  // YEEEEEHAAAWWWWWW
+	taste_description = "what might be your throat melting and nose hair burning"
+	color = "#d8fbfd63"
+	quality = DRINK_NICE
+
 //Avar boozes
 
 /datum/reagent/consumable/ethanol/beer/avarmead

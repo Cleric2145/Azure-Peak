@@ -102,6 +102,32 @@
 	. = ..()
 	owner.add_stress(/datum/stressevent/moondust_purest)
 
+/datum/status_effect/buff/purified_ozium
+	id = "purified_ozium"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/druqks
+	effectedstats = list("speed" = -5, "endurance" = 4, "intelligence" = -3, "constitution" = 3) //add pain/crit removal, Onutsio
+	duration = 80 SECONDS
+
+/datum/status_effect/buff/purified_ozium/nextmove_modifier()
+	return 1.2
+
+/datum/status_effect/buff/purified_ozium/on_apply()
+	. = ..()
+	owner.add_stress(/datum/stressevent/purified_ozium)
+
+/datum/status_effect/buff/starsugar
+	id = "starsugar"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/druqks
+	effectedstats = list("speed" = 4, "endurance" = 4, "intelligence" = -3, "constitution" = -3) //add sleepiness removal, Onutsio
+	duration = 80 SECONDS
+
+/datum/status_effect/buff/starsugar/nextmove_modifier()
+	return 0.7
+
+/datum/status_effect/buff/starsugar/on_apply()
+	. = ..()
+	owner.add_stress(/datum/stressevent/starsugar)
+
 /datum/status_effect/buff/weed
 	id = "weed"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/weed
