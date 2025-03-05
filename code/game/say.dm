@@ -94,7 +94,22 @@ GLOBAL_LIST_INIT(freqtospan, list(
 				arrowpart += " ⇈"
 			if(speakturf.z < sourceturf.z)
 				arrowpart += " ⇊"
-			if(!HAS_TRAIT(src, TRAIT_KEENEARS))
+			
+			var/hidden = TRUE
+			if(HAS_TRAIT(src, TRAIT_KEENEARS))
+				if(ishuman(speaker) && ishuman(src))
+					var/mob/living/carbon/human/HS = speaker
+					var/mob/living/carbon/human/HL = src
+					if(length(HL.mind?.known_people))
+						if(HS.real_name in HL.mind?.known_people)	//We won't recognise people we don't know w/ Keen Ears
+							hidden = FALSE
+					else
+						hidden = TRUE
+				else
+					hidden = FALSE
+			else
+				hidden = TRUE
+			if(hidden)
 				if(istype(speaker, /mob/living))
 					var/mob/living/L = speaker
 					namepart = "Unknown [(L.gender == FEMALE) ? "Woman" : "Man"]"

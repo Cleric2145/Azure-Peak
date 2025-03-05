@@ -394,6 +394,14 @@
 	craftdiff = 3
 	sellprice = 20
 
+/datum/crafting_recipe/roguetown/sewing/armingjacket
+	name = "arming jacket"
+	result = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
+	reqs = list(/obj/item/natural/cloth = 4,
+				/obj/item/natural/fibers = 1)
+	tools = list(/obj/item/needle)
+	craftdiff = 3
+
 /datum/crafting_recipe/roguetown/sewing/paddedcap
 	name = "padded Cap"
 	result = /obj/item/clothing/head/roguetown/paddedcap
@@ -733,7 +741,7 @@
 /datum/crafting_recipe/roguetown/sewing/apothpants
 	name = "knitted pants"
 	result = list(/obj/item/clothing/under/roguetown/trou/apothecary)
-	reqs = list(/obj/item/natural/cloth = 1,
+	reqs = list(/obj/item/natural/cloth = 2,
 	            /obj/item/natural/fibers = 2)
 	tools = list(/obj/item/needle)
 	craftdiff = 4
@@ -910,3 +918,13 @@
 	craftdiff = 4
 	sellprice = 13
 	
+/datum/crafting_recipe/roguetown/sewing/weddingdress
+	name = "wedding silk dress"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/silkdress/weddingdress)
+	reqs = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 2,
+				/obj/item/natural/silk = 2,
+				/obj/item/alch/golddust = 1)
+	tools = list(/obj/item/needle)
+	craftdiff = 5
+	sellprice = 40

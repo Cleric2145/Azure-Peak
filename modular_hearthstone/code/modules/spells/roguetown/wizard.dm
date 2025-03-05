@@ -391,16 +391,19 @@
 
 /obj/effect/proc_holder/spell/self/message/cast(list/targets, mob/user)
 	. = ..()
-	var/input = input(user, "Who are you trying to contact?")
-	if(!input)
+
+	var/list/eligible_players = list()
+
+	if(user.mind.known_people.len)
+		for(var/people in user.mind.known_people)
+			eligible_players += people
+	else
+		to_chat(user, span_warning("I don't know anyone."))
 		revert_cast()
 		return
-	if(!user.key)
-		to_chat(user, span_warning("I sense a body, but the mind does not seem to be there."))
-		revert_cast()	//if the spell fails, cooldown is reset (waiting 1 minute cause your bad at spelling sux)
-		return
-	if(!user.mind || !user.mind.do_i_know(name=input))
-		to_chat(user, span_warning("I don't know anyone by that name."))
+	var/input = input(user, "Who do you wish to contact?", src) as null|anything in eligible_players
+	if(isnull(input))
+		to_chat(user, span_warning("No target selected."))
 		revert_cast()
 		return
 	for(var/mob/living/carbon/human/HL in GLOB.human_list)
@@ -967,6 +970,7 @@
 
 /obj/effect/proc_holder/spell/invoked/guidance
 	name = "Guidance"
+	overlay_state = "guidance"
 	desc = "Makes one's hand travel true, blessing them with arcyne luck in combat. (+10% chance to hit with melee, +10% chance to defend from melee)"
 	cost = 2
 	xp_gain = TRUE

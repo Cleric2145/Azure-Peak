@@ -18,6 +18,7 @@
 	fillsounds = list('sound/items/fillcup.ogg')
 	poursounds = list('sound/items/fillbottle.ogg')
 	experimental_onhip = TRUE
+	experimental_inhand = FALSE
 	sellprice = 1
 
 

@@ -106,6 +106,7 @@
 	name = "Iron Javelin (+1 Small Log)"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/javelin
 	craftdiff = 1
 
 /// STEEL WEAPONS
@@ -275,10 +276,11 @@
 	craftdiff = 0
 	createditem_num = 4
 
-/datum/anvil_recipe/weapons/iron/javelin
+/datum/anvil_recipe/weapons/steel/javelin
 	name = "Steel Javelin (+1 Small Log)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/javelin/steel
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/steel/fishspear
@@ -399,6 +401,14 @@
 	craftdiff = 3
 	createditem_num = 4
 
+/datum/anvil_recipe/weapons/silver/javelin
+	name = "Silver Javelin (+1 Small Log)"
+	req_bar = /obj/item/ingot/silver
+	additional_items = list(/obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/javelin/silver
+	craftdiff = 3
+
+
 // ------ BRONZE ------
 
 /datum/anvil_recipe/weapons/gladius
@@ -444,20 +454,20 @@
 	created_item = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 
 /datum/anvil_recipe/weapons/iron/bolts
-	name = "Crossbow Bolts 5x (+1 Stick)"
+	name = "Crossbow Bolts 10x (+2 Stick)"
 	req_bar = /obj/item/ingot/iron
-	additional_items = list(/obj/item/grown/log/tree/stick)
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
 	created_item = /obj/item/ammo_casing/caseless/rogue/bolt
-	createditem_num = 5
+	createditem_num = 10
 	i_type = "Ammo"
 
 /// RANGED
 /datum/anvil_recipe/weapons/iron/arrows
-	name = "Arrows 5x (+1 Stick)"
+	name = "Arrows 10x (+2 Stick)"
 	req_bar = /obj/item/ingot/iron
-	additional_items = list(/obj/item/grown/log/tree/stick)
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
 	created_item = /obj/item/ammo_casing/caseless/rogue/arrow/iron
-	createditem_num = 5
+	createditem_num = 10
 	i_type = "Ammo"
 	craftdiff = 0
 

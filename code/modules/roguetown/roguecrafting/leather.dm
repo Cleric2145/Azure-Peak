@@ -128,7 +128,7 @@
 /datum/crafting_recipe/roguetown/leather/heavybracers
 	name = "hardened leather bracers"
 	result = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
-	reqs = list(/obj/item/natural/hide/cured = 1,
+	reqs = list(/obj/item/natural/hide/cured = 2,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
@@ -142,7 +142,7 @@
 /datum/crafting_recipe/roguetown/leather/pants
 	name = "leather pants"
 	result = list(/obj/item/clothing/under/roguetown/trou/leather)
-	reqs = list(/obj/item/natural/hide/cured = 1)
+	reqs = list(/obj/item/natural/hide/cured = 2)
 	sellprice = 10
 
 /datum/crafting_recipe/roguetown/leather/volfhelm
@@ -164,7 +164,7 @@
 	name = "hardened leather pants"
 	result = list(/obj/item/clothing/under/roguetown/heavy_leather_pants)
 	reqs = list(
-		/obj/item/natural/hide/cured = 1,
+		/obj/item/natural/hide/cured = 3,
 		/obj/item/reagent_containers/food/snacks/tallow = 1,
 		/obj/item/natural/fibers = 1,
 		)
@@ -253,6 +253,12 @@
 	reqs = list(/obj/item/natural/hide/cured = 2)
 	sellprice = 26
 
+/datum/crafting_recipe/roguetown/leather/cuirass
+	name = "leather cuirass"
+	result = /obj/item/clothing/suit/roguetown/armor/leather
+	reqs = list(/obj/item/natural/hide/cured = 2)
+	sellprice = 26
+
 /datum/crafting_recipe/roguetown/leather/bikini
 	name = "leather bikini armor"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/bikini
@@ -281,6 +287,17 @@
 /datum/crafting_recipe/roguetown/leather/heavy_leather_armor/coat
 	name = "hardened leather coat"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
+	reqs = list(
+		/obj/item/natural/hide/cured = 3,
+		/obj/item/reagent_containers/food/snacks/tallow = 1,
+		/obj/item/natural/fibers = 1,
+		)
+	sellprice = 36
+	craftdiff = 4
+
+/datum/crafting_recipe/roguetown/leather/heavy_leather_armor/jacket
+	name = "hardened leather jacket"
+	result = /obj/item/clothing/suit/roguetown/armor/leather/heavy/jacket
 	reqs = list(
 		/obj/item/natural/hide/cured = 3,
 		/obj/item/reagent_containers/food/snacks/tallow = 1,
@@ -382,7 +399,7 @@
 /datum/crafting_recipe/roguetown/leather/leathertights
 	name = "leather tights"
 	result = list(/obj/item/clothing/under/roguetown/trou/leathertights)
-	reqs = list(/obj/item/natural/hide/cured = 1)
+	reqs = list(/obj/item/natural/hide/cured = 2)
 	tools = list(/obj/item/needle)
 	craftdiff = 3
 	sellprice = 10
@@ -391,7 +408,7 @@
 	name = "thin leather pants"
 	result = list(/obj/item/clothing/under/roguetown/trou/artipants)
 	reqs = list(/obj/item/natural/cloth = 1,
-	            /obj/item/natural/hide/cured = 1)
+	            /obj/item/natural/hide/cured = 2)
 	tools = list(/obj/item/needle)
 	craftdiff = 3
 	sellprice = 11
@@ -401,7 +418,7 @@
 	result = list(/obj/item/clothing/under/roguetown/trou/leather/pontifex)
 	reqs = list(/obj/item/natural/cloth = 1,
 	            /obj/item/natural/fibers = 1,
-	            /obj/item/natural/hide/cured = 1)
+	            /obj/item/natural/hide/cured = 2)
 	tools = list(/obj/item/needle)
 	craftdiff = 5
 	sellprice = 20

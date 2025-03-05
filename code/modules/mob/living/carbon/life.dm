@@ -124,6 +124,9 @@
 					rogstam_add(10)
 			else if(fallingas)
 				fallingas = 0
+		else if(HAS_TRAIT(src, TRAIT_NOSLEEP) && !(mobility_flags & MOBILITY_STAND))
+			rogstam_add(5)
+
 
 		handle_brain_damage()
 

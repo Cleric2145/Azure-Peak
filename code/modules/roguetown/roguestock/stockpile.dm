@@ -104,6 +104,19 @@
 	importexport_amt = 10
 	passive_generation = 4
 
+//natural/hide/cured must be defined/populated in sstreasury before natural/hide, for istype stockpile check to work
+/datum/roguestock/stockpile/cured
+	name = "Cured Leather"
+	desc = "Cured Leather ready to be worked."
+	item_type = /obj/item/natural/hide/cured
+	held_items = list(2, 0)
+	payout_price = 3
+	withdraw_price = 7
+	transport_fee = 3
+	export_price = 7
+	importexport_amt = 10
+	passive_generation = 3
+
 /datum/roguestock/stockpile/hide
 	name = "Hide"
 	desc = "Stripped hide from animals."
@@ -127,18 +140,6 @@
 	export_price = 15
 	importexport_amt = 5
 	passive_generation = 1
-
-/datum/roguestock/stockpile/cured
-	name = "Cured Leather"
-	desc = "Cured Leather ready to be worked."
-	item_type = /obj/item/natural/hide/cured
-	held_items = list(2, 0)
-	payout_price = 3
-	withdraw_price = 7
-	transport_fee = 3
-	export_price = 7
-	importexport_amt = 10
-	passive_generation = 3
 
 /datum/roguestock/stockpile/salt
 	name = "Salt"
