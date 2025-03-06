@@ -839,6 +839,41 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			if(!job.required && !isnull(job.max_pq) && (get_playerquality(user.ckey) > job.max_pq))
 				HTML += "<font color=#a59461>[used_name] (Max PQ: [job.max_pq])</font></td> <td> </td></tr>"
 				continue
+			if(length(job.virtue_restrictions) && length(job.vice_restrictions))
+				var/name
+				if(virtue.type in job.virtue_restrictions)
+					name = virtue.name
+				if(virtuetwo?.type in job.virtue_restrictions)
+					if(name)
+						name += ", "
+						name += virtuetwo.name
+					else
+						name = virtuetwo.name
+				if(charflaw.type in job.vice_restrictions)
+					if(name)
+						name += ", "
+						name += charflaw.name
+					else
+						name += charflaw.name
+				if(!isnull(name))
+					HTML += "<font color='#a561a5'>[used_name] (Disallowed by Virtues / Vice: [name])</font></td> <td> </td></tr>"
+			if(length(job.virtue_restrictions))
+				var/name
+				if(virtue.type in job.virtue_restrictions)
+					name = virtue.name
+				if(virtuetwo?.type in job.virtue_restrictions)
+					if(name)
+						name += ", "
+						name += virtuetwo.name
+					else
+						name = virtuetwo.name
+				if(!isnull(name))
+					HTML += "<font color='#a59461'>[used_name] (Disallowed by Virtue: [name])</font></td> <td> </td></tr>"
+					continue
+			if(length(job.vice_restrictions))
+				if(charflaw.type in job.vice_restrictions)
+					HTML += "<font color='#a56161'>[used_name] (Disallowed by Vice: [charflaw.name])</font></td> <td> </td></tr>"
+					continue
 			var/job_unavailable = JOB_AVAILABLE
 			if(isnewplayer(parent?.mob))
 				var/mob/dead/new_player/new_player = parent.mob

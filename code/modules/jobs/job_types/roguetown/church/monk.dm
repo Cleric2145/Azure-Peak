@@ -65,17 +65,17 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/necra
 			shirt = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
 			cloak = /obj/item/clothing/cloak/raincloak/mortus
-		if(/datum/patron/divine/pestra) //PLEASE add leper gear later, this SUCKS dude
-			head = /obj/item/clothing/head/roguetown/necrahood
+		if(/datum/patron/divine/pestra)
 			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			pants = /obj/item/clothing/under/roguetown/trou/leather/mourning
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/necra
+			cloak = /obj/item/clothing/cloak/templar/pestran
 		if(/datum/patron/divine/eora) //Eora content from Stonekeep
 			head = /obj/item/clothing/head/roguetown/eoramask
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/eora
+			cloak = /obj/item/clothing/cloak/templar/eoran
 		if(/datum/patron/divine/malum)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum

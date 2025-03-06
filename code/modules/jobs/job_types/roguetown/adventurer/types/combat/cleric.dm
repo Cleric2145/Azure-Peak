@@ -19,6 +19,11 @@
 /datum/outfit/job/roguetown/adventurer/cleric/pre_equip(mob/living/carbon/human/H)
 	..()
 
+	// Add druidic skill for Dendor followers
+	if(istype(H.patron, /datum/patron/divine/dendor))
+		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE)
+		to_chat(H, span_notice("As a follower of Dendor, you have innate knowledge of druidic magic."))
+
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)
 	var/classes = list("Monk","Paladin","Cantor","Missionary")
@@ -135,7 +140,7 @@
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
 				if (/datum/patron/divine/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
-					head = /obj/item/clothing/head/roguetown/helmet/sallet/eoran
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
 				if (/datum/patron/divine/ravox)
 					cloak = /obj/item/clothing/cloak/templar/ravox
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold

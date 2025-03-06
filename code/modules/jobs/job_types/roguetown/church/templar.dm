@@ -60,13 +60,13 @@
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/divine/necra)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
-			cloak = /obj/item/clothing/cloak/tabard/crusader/necra
+			cloak = /obj/item/clothing/cloak/templar/necran
 		if(/datum/patron/divine/pestra)
 			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
-			cloak = /obj/item/clothing/cloak/tabard/crusader/pestra
+			cloak = /obj/item/clothing/cloak/templar/pestran
 		if(/datum/patron/divine/eora) //Eora content from stonekeep
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
-			cloak = /obj/item/clothing/cloak/tabard/crusader/eora
+			cloak = /obj/item/clothing/cloak/templar/eoran
 		if(/datum/patron/divine/noc)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
@@ -75,7 +75,7 @@
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
 		if(/datum/patron/divine/malum)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
-			cloak = /obj/item/clothing/cloak/tabard/crusader/malum
+			cloak = /obj/item/clothing/cloak/templar/malumite
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
@@ -169,8 +169,8 @@
 			cloak = /obj/item/clothing/cloak/templar/pestran
 		if(/datum/patron/divine/eora) //Eora content from stonekeep
 			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
-			head = /obj/item/clothing/head/roguetown/helmet/sallet/eoran
-			cloak = /obj/item/clothing/cloak/tabard/crusader/eora
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
+			cloak = /obj/item/clothing/cloak/templar/eoran
 		if(/datum/patron/divine/noc)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/noc
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
@@ -252,6 +252,8 @@
 			weapons += "Cackle Lash"
 		if(/datum/patron/divine/ravox)
 			weapons += "Duel Settler"
+		if(/datum/patron/divine/eora)
+			weapons += "The Heartstring"
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Bastard Sword")
@@ -291,5 +293,6 @@
 		if("Duel Settler")
 			H.put_in_hands(new /obj/item/rogueweapon/mace/goden/steel/ravox(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-
-
+		if("The Heartstring")
+			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/eora(H), TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)

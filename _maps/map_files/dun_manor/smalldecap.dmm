@@ -913,10 +913,9 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "lK" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/item/roguecoin/gold/pile,
 /obj/effect/spawner/lootdrop/potion_stats,
-/obj/effect/spawner/lootdrop/potion_stats,
-/obj/effect/spawner/lootdrop/potion_stats,
+/obj/item/clothing/neck/roguetown/talkstone,
+/obj/item/rogueweapon/sword/sabre/elf,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "lM" = (
@@ -2011,7 +2010,9 @@
 /obj/structure/closet/crate/chest/lootbox,
 /obj/item/riddleofsteel,
 /obj/effect/spawner/lootdrop/potion_vitals,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/item/ingot/blacksteel,
+/obj/item/ingot/blacksteel,
+/obj/item/book/granter/spellbook/magician,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "zV" = (
@@ -2359,9 +2360,11 @@
 /area/rogue/outdoors/mountains/decap)
 "Ed" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/item/roguecoin/gold/pile,
 /obj/effect/spawner/lootdrop/potion_vitals,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/item/roguegem/random,
+/obj/item/roguegem/random,
+/obj/item/roguegem/diamond,
+/obj/item/listenstone,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "Ee" = (

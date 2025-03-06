@@ -971,6 +971,36 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/armet
+	name = "armet"
+	desc = "Holy lamb, sacrificial hero, blessed idiot - Psydon endures. Will you endure alongside Him, as a knight of humenity, or crumble before temptation?"
+	icon_state = "armet"
+
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/armet/AdjustClothes(mob/user)
+	if(loc == user)
+		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
+		if(adjustable == CAN_CADJUST)
+			adjustable = CADJUSTED
+			icon_state = "armet_raised"
+			body_parts_covered = HEAD|HAIR|EARS
+			flags_inv = HIDEEARS
+			flags_cover = null
+			emote_environment = 0
+			update_icon()
+			if(ishuman(user))
+				var/mob/living/carbon/H = user
+				H.update_inv_head()
+			block2add = null
+		else if(adjustable == CADJUSTED)
+			ResetAdjust(user)
+			emote_environment = 3
+			update_icon()
+			if(user)
+				if(ishuman(user))
+					var/mob/living/carbon/H = user
+					H.update_inv_head()
+		user.update_fov_angles()
+
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 	name = "golden helmet"
 	icon_state = "topfhelm_gold"
@@ -1229,6 +1259,46 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull
+	name = "hounskull bascinet"
+	desc = "A bascinet with a conical visor, prominent amongst those who remain unburdened with snouts and whiskers. Nestle a feather onto the rim to bare your pride."
+	icon_state = "bascinet"
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull/AdjustClothes(mob/user)
+	if(loc == user)
+		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
+		if(adjustable == CAN_CADJUST)
+			adjustable = CADJUSTED
+			icon_state = "bascinet_raised"
+			body_parts_covered = HEAD|EARS|HAIR
+			flags_inv = HIDEEARS|HIDEHAIR
+			flags_cover = null
+			emote_environment = 0
+			update_icon()
+			if(ishuman(user))
+				var/mob/living/carbon/H = user
+				H.update_inv_head()
+			block2add = null
+		else if(adjustable == CADJUSTED)
+			ResetAdjust(user)
+			emote_environment = 3
+			update_icon()
+			if(user)
+				if(ishuman(user))
+					var/mob/living/carbon/H = user
+					H.update_inv_head()
+		user.update_fov_angles()
+
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
 /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth
 	name = "froggemund helmet"
 	desc = "A tall and imposing frogmouth-style helm popular in the highest plateaus of the Azure Peak. Covers not just the head, but the neck as well. Add a cloth to show the colors of your family or allegiance."
@@ -1465,8 +1535,8 @@
 /obj/item/clothing/head/roguetown/helmet/sallet/eoran
 	name = "eora helmet"
 	desc = "A standard helmet forged in the style typical of Eoran worshippers, a simple yet practical protective piece of equipment. Upon it lays several laurels of flowers and other colorful ornaments, followed by several symbols and standards of the user's chapter, accomplishments or even punishment"
-	icon_state = "eorahelm"
-	item_state = "eorahelm"
+	icon_state = "eorahelmsallet"
+	item_state = "eorahelmsallet"
 
 //................ Briar Thorns ............... //	- Dendor Briar
 /obj/item/clothing/head/roguetown/padded/briarthorns

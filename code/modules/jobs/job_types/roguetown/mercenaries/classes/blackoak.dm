@@ -19,7 +19,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/elven
 	backl = /obj/item/storage/backpack/rogue/satchel
-	r_hand = /obj/item/rogueweapon/halberd/bardiche
+	r_hand = /obj/item/rogueweapon/halberd/glaive
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/special
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 	pants = /obj/item/clothing/under/roguetown/trou/leather

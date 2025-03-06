@@ -724,6 +724,16 @@
 	max_blade_int = 300
 	wdefense = 7
 
+/obj/item/rogueweapon/sword/rapier/eora
+	name = "The Heartstring"
+	desc = "For when soft words cannot be spoken more, and hearts are to be pierced."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "eorarapier"
+	grid_width = 32
+	grid_height = 64
+	dropshrink = 0
+	bigboy = FALSE
+
 /obj/item/rogueweapon/sword/cutlass
 	name = "cutlass"
 	desc = "Used by pirates and deckhands."
