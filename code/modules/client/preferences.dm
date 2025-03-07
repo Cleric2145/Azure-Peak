@@ -257,7 +257,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			used_title = "Character Sheet"
 
 			// Top-level menu table
-			dat += "<table style='width: 100%; line-height: 20px;'>"
+			dat += "<table style='width: 100%; height: 100%; line-height: 20px;'>"
 			// NEXT ROW
 			dat += "<tr>"
 			dat += "<td style='width:33%;text-align:left'>"
@@ -330,6 +330,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<BR>"
 			dat += "<b>Nickname:</b> "
 			dat += "<a href='?_src_=prefs;preference=nickname;task=input'>[nickname]</a><BR>"
+			dat += "<br><b>Nickname Color:</b> </b><a href='?_src_=prefs;preference=highlight_color;task=input'>Change</a><BR>"
 			// LETHALSTONE EDIT BEGIN: add pronoun prefs
 			dat += "<b>Pronouns:</b> <a href='?_src_=prefs;preference=pronouns;task=input'>[pronouns]</a><BR>"
 			// LETHALSTONE EDIT END
@@ -424,7 +425,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 
 			dat += "<b>Voice Color: </b><a href='?_src_=prefs;preference=voice;task=input'>Change</a>"
-			dat += "<br><b>Nickname Color: </b> </b><a href='?_src_=prefs;preference=highlight_color;task=input'>Change</a>"
 			dat += "<br><b>Voice Pitch: </b><a href='?_src_=prefs;preference=voice_pitch;task=input'>[voice_pitch]</a>"
 			//dat += "<br><b>Accent:</b> <a href='?_src_=prefs;preference=char_accent;task=input'>[char_accent]</a>"
 			dat += "<br><b>Features:</b> <a href='?_src_=prefs;preference=customizers;task=menu'>Change</a>"
@@ -443,10 +443,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "<br><b>OOC Extra:</b> <a href='?_src_=prefs;preference=ooc_extra;task=input'>Change</a>"
 			dat += "<br><a href='?_src_=prefs;preference=ooc_preview;task=input'><b>Preview Examine</b></a>"
-
-			dat += "<br><b>Loadout Item:</b> <a href='?_src_=prefs;preference=loadout_item;task=input'>[loadout ? loadout.name : "None"]</a>"
 			dat += "</td>"
-
 
 			dat += "</tr></table>"
 //			-----------END OF BODY TABLE-----------
